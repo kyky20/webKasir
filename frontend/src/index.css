@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *, .dark, .dark *));
+
+@theme {
+  /* ── Ember Design System — Amber / Primary ── */
+  --color-primary:          #E8740C;
+  --color-primary-hover:    #C85F08;
+  --color-primary-active:   #A34C06;
+  --color-primary-light:    #FEF3E2;
+  --color-primary-muted:    #FCD34D;
+
+  /* ── Sidebar (always dark) ── */
+  --color-sidebar-bg:       #1C1917;
+  --color-sidebar-bg2:      #292524;
+  --color-sidebar-text:     #A8A29E;
+  --color-sidebar-active:   #FFFFFF;
+  --color-sidebar-border:   #292524;
+
+  /* ── Light-mode surfaces ── */
+  --color-bg:               #FAFAF9;
+  --color-surface:          #FFFFFF;
+  --color-surface-raised:   #FFFFFF;
+  --color-border:           #E7E5E4;
+  --color-border-muted:     #F5F5F4;
+
+  /* ── Text ── */
+  --color-text-primary:     #1C1917;
+  --color-text-secondary:   #78716C;
+  --color-text-muted:       #A8A29E;
+  --color-text-on-primary:  #FFFFFF;
+
+  /* ── Semantic ── */
+  --color-success:          #16A34A;
+  --color-success-light:    #DCFCE7;
+  --color-warning:          #D97706;
+  --color-warning-light:    #FEF3C7;
+  --color-danger:           #DC2626;
+  --color-danger-light:     #FEE2E2;
+  --color-info:             #2563EB;
+  --color-info-light:       #DBEAFE;
+
+  /* ── Radius ── */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+
+  /* ── Legacy brand aliases (kept for backward compat) ── */
+  --color-brand-primary:        #477A60;
+  --color-brand-primary-hover:  #3B6650;
+  --color-brand-primary-active: #315341;
+  --color-brand-primary-light:  #E8F0EA;
+  --color-brand-secondary:      #E8F0EA;
+  --color-brand-bg:             #F8FAF8;
+  --color-brand-surface:        #FFFFFF;
+  --color-brand-text:           #202923;
+  --color-brand-muted:          #5F6B62;
+  --color-brand-border:         #E5EAE6;
+  --color-brand-danger:         #C0392B;
+  --color-brand-danger-light:   #FDECEA;
+  --color-brand-warning:        #D97706;
+  --color-brand-warning-light:  #FEF3C7;
+  --color-brand-success:        #2E7D32;
+  --color-brand-success-light:  #E8F5E9;
+
+  --radius-brand: 12px;
+}
+
+/* ── Ember Design Tokens — Light Mode ── */
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+  --color-bg:               #FAFAF9;
+  --color-surface:          #FFFFFF;
+  --color-surface-raised:   #FFFFFF;
+  --color-border:           #E7E5E4;
+  --color-border-muted:     #F5F5F4;
+  --color-text-primary:     #1C1917;
+  --color-text-secondary:   #78716C;
+  --color-text-muted:       #A8A29E;
+  --color-text-on-primary:  #FFFFFF;
+
+  color: var(--color-text-primary);
+  background-color: var(--color-bg);
+}
+
+/* ── Dark Mode Overrides ── */
+[data-theme="dark"],
+.dark {
+  --color-bg:               #0C0A09;
+  --color-surface:          #1C1917;
+  --color-surface-raised:   #292524;
+  --color-border:           #44403C;
+  --color-border-muted:     #292524;
+  --color-text-primary:     #F5F5F4;
+  --color-text-secondary:   #A8A29E;
+  --color-text-muted:       #78716C;
+
+  /* Primary tints for dark mode */
+  --color-primary-light:    rgba(232, 116, 12, 0.16);
+  --color-primary-muted:    rgba(232, 116, 12, 0.28);
+
+  /* Semantic tints for dark mode */
+  --color-success-light:    rgba(22, 163, 74, 0.18);
+  --color-warning-light:    rgba(217, 119, 6, 0.18);
+  --color-danger-light:     rgba(220, 38, 38, 0.18);
+  --color-info-light:       rgba(37, 99, 235, 0.18);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* ── Global Select Fallback Styling ── */
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23A8A29E' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.65rem center;
+  background-repeat: no-repeat;
+  background-size: 1.15em 1.15em;
+  padding-right: 2.25rem !important;
+}
+
+[data-theme="dark"] select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%2378716C' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+}
+
+/* Custom scrollbars for POS and dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Dark sidebar scrollbar */
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #44403C;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #57534E;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus ring utility */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Print Media Styles for Thermal Receipts and Reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  /* Thermal receipt styling (receipt modal & thermal printer roll) */
+  body:has(#thermal-receipt) {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body:has(#thermal-receipt) * {
+    visibility: hidden;
+  }
+
+  body:has(#thermal-receipt) #thermal-receipt,
+  body:has(#thermal-receipt) #thermal-receipt * {
+    visibility: visible;
+  }
+
+  body:has(#thermal-receipt) #thermal-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  /* Business Accounting Reports (A4 Multi-page Document) */
+  body:has(#printable-report) {
+    background: #ffffff !important;
+    color: #000000 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  body:has(#printable-report) .no-print,
+  body:has(#printable-report) nav,
+  body:has(#printable-report) aside,
+  body:has(#printable-report) header {
+    display: none !important;
+  }
+
+  body:has(#printable-report) main {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    width: 100% !important;
+  }
+
+  body:has(#printable-report) #printable-report {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    overflow: visible !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}

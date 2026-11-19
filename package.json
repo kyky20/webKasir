@@ -1,0 +1,13 @@
+{
+  "name": "kasirku-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"php backend/artisan serve --port=8000\" \"npm --prefix frontend run dev\"",
+    "start": "concurrently -n \"backend,frontend\" -c \"blue,green\" \"php backend/artisan serve --port=8000\" \"npm --prefix frontend run dev\"",
+    "build": "npm --prefix frontend run build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
