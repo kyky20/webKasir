@@ -4,6 +4,122 @@ Aplikasi Point of Sale (POS) dan manajemen pembukuan ritel modern berbasis web y
 
 ---
 
+## 📸 Tangkapan Layar Aplikasi (Screenshots Showcase)
+
+Berikut adalah galeri antarmuka aktual aplikasi Kasirku yang diambil langsung dari sistem operasional:
+
+### 1. Halaman Publik & 3D Interactive Showcase
+Tampilan antarmuka publik yang menyambut pengunjung dan memperkenalkan seluruh kapabilitas aplikasi dalam perspektif spasial 3D.
+
+| Landing Page Publik | 3D Interactive Showcase (`/demo`) |
+| :---: | :---: |
+| ![Landing Page](hasilss/01_landing_page.png) | ![3D Showcase](hasilss/02_demo_showcase.png) |
+| *Hero section & alur nilai tambah aktual* | *Glassy Coverflow 3D dengan gestur usap/swipe* |
+
+<br />
+
+| Halaman Masuk Akun (Login) |
+| :---: |
+| ![Login Page](hasilss/03_login_page.png) |
+| *Autentikasi aman berbasis peran (Role-Based Access Control)* |
+
+---
+
+### 2. Portal Owner: Dashboard, Kasir & Penjualan
+Modul operasional harian pemilik usaha untuk memantau performa bisnis dan mengawasi setiap transaksi toko.
+
+| Dashboard Eksekutif Owner | Terminal POS Kasir |
+| :---: | :---: |
+| ![Dashboard Owner](hasilss/04_owner_dashboard.png) | ![POS Kasir](hasilss/05_owner_pos.png) |
+| *Ringkasan omzet, laba bersih & grafik tren penjualan* | *Input barcode instan, diskon & kalkulasi otomatis* |
+
+<br />
+
+| Riwayat Seluruh Transaksi Toko |
+| :---: |
+| ![Riwayat Transaksi](hasilss/06_owner_transactions.png) |
+| *Arsip faktur penjualan, filter tanggal, status bayar & cetak ulang* |
+
+---
+
+### 3. Portal Owner: Produk, Inventaris & Pembelian
+Kendali terpusat atas master katalog barang dagangan, mutasi stok fisik, hingga pengadaan supplier.
+
+| Katalog Produk & Kategori Master | Manajemen Inventaris & Stok Opname |
+| :---: | :---: |
+| ![Katalog Produk](hasilss/07_owner_products.png) | ![Inventaris Stok](hasilss/08_owner_inventory.png) |
+| *Kelola SKU, barcode, harga modal HPP & harga jual* | *Kartu stok, penyesuaian opname & log barang masuk/keluar* |
+
+<br />
+
+| Pengadaan Barang & Utang Supplier |
+| :---: |
+| ![Pembelian & Utang](hasilss/09_owner_purchases.png) |
+| *Pencatatan faktur kulakan, jatuh tempo utang & status pelunasan* |
+
+---
+
+### 4. Portal Owner: Bisnis, Keuangan & Laporan
+Pencatatan arus kas operasional dan laporan keuangan transparan tanpa estimasi manual.
+
+| Kontak Pelanggan & Supplier | Pembukuan & Arus Kas (Cash Flow) |
+| :---: | :---: |
+| ![Kontak](hasilss/10_owner_contacts.png) | ![Pembukuan Kas](hasilss/11_owner_finance.png) |
+| *Direktori database customer dan rekanan vendor* | *Pencatatan kas masuk, kas keluar, dan mutasi saldo akun* |
+
+<br />
+
+| Laporan Penjualan & Laba Rugi | Pratinjau Cetak Formal Laporan A4 |
+| :---: | :---: |
+| ![Laporan Keuangan](hasilss/12_owner_reports.png) | ![Cetak Laporan](hasilss/13_owner_reports_print.png) |
+| *Laba kotor vs laba bersih dengan kalkulasi HPP riil* | *Format siap cetak printer dan ekspor dokumen PDF A4* |
+
+---
+
+### 5. Portal Owner: Administrasi, Log Audit & Konfigurasi Toko
+Kontrol keamanan staf kasir, jejak rekam audit sistem, serta pengaturan identitas toko dan format struk termal.
+
+| Manajemen Pegawai & Hak Akses | Log Aktivitas Audit Toko |
+| :---: | :---: |
+| ![Manajemen Pegawai](hasilss/14_owner_employees.png) | ![Log Audit](hasilss/15_owner_activity_logs.png) |
+| *Tambah kasir, ganti kata sandi & proteksi data laba* | *Jejak audit: login, perubahan harga modal & pembatalan* |
+
+<br />
+
+| Pengaturan Toko & Konfigurasi Struk Termal |
+| :---: |
+| ![Pengaturan Toko](hasilss/16_owner_settings.png) |
+| *Profil identitas usaha, tarif pajak PPN, dan pratinjau live struk belanja* |
+
+---
+
+### 6. Terminal Kasir (Employee Experience)
+Antarmuka khusus staf kasir yang dirancang minimalis dan bebas hambatan demi mempercepat antrean meja pembayaran.
+
+| Terminal Kasir POS | Dashboard Operasional Kasir |
+| :---: | :---: |
+| ![Kasir POS](hasilss/17_kasir_pos.png) | ![Dashboard Kasir](hasilss/18_kasir_dashboard.png) |
+| *Layar kasir cepat dengan proteksi data rahasia laba* | *Ringkasan penjualan shift & target harian kasir* |
+
+<br />
+
+| Riwayat Transaksi Shift Kasir | Log & Notifikasi Kasir |
+| :---: | :---: |
+| ![Riwayat Shift Kasir](hasilss/19_kasir_my_transactions.png) | ![Notifikasi Kasir](hasilss/20_kasir_activity_logs.png) |
+| *Daftar transaksi yang diproses selama jam kerja kasir* | *Peringatan stok menipis dan konfirmasi pembayaran* |
+
+---
+
+### 7. Format Struk Belanja Termal
+Kompatibilitas cetak instan ke mesin printer thermal kasir standar.
+
+| Struk Belanja Kasir Thermal (58mm / 80mm) |
+| :---: |
+| ![Struk Thermal](hasilss/21_receipt_thermal.png) |
+| *Layout struk belanja presisi dengan informasi diskon, pajak, dan nomor faktur unik* |
+
+---
+
 ## 🚀 Fitur Utama Berdasarkan Peran
 
 ### 1. Portal Owner (Pemilik Bisnis)
@@ -146,6 +262,7 @@ webKasir/
 │   │   └── services/         # Klien Axios & integrasi API
 │   └── package.json
 │
+├── hasilss/                  # Koleksi screenshot aktual seluruh modul aplikasi
 ├── package.json              # Orkestrasi skrip Concurrently (dev & build)
 ├── run-all.bat               # Skrip peluncur 1-klik untuk lingkungan Windows/Laragon
 └── README.md                 # Dokumentasi proyek
